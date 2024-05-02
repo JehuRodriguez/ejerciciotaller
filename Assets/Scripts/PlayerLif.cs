@@ -8,7 +8,7 @@ public class PlayerLif : MonoBehaviour
     {
         if(collision.gameObject.CompareTag("DamageWall"))
         {
-            Destroy(gameObject);
+            Destroy(collision.gameObject);
         }
     }
 }
