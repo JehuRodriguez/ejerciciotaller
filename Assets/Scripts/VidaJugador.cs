@@ -14,25 +14,13 @@ public class VidaJugador : MonoBehaviour
         {
             Debug.Log("JugadorMuerto");
             // logica de "Muerte" aca
+            // puedes desactivar el Game Object del jugador o reniciar su nivel 
         }
     }
 
-   
-
-
-
-
-
-
-
-
-
-
-
-
     void Start()
     {
-        
+        vidaActual = vidaMaxima;
     }
 
     
