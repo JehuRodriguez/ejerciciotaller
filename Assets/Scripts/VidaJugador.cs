@@ -19,8 +19,7 @@ public class VidaJugador : MonoBehaviour
         }
         else 
         {
-            Debug.Log("El jugador a perdido 50 puntos ");
-            Debug.Log("El jugador a perdido 40 puntos ");
+            Debug.Log("El jugador ha perdido" + daño + "puntos de vida ");
         }
 
     }
@@ -30,9 +29,12 @@ public class VidaJugador : MonoBehaviour
         vidaActual = vidaMaxima;
     }
 
-    
-    void Update()
+    public void RecuperarVida(float cantidadRecuperacion)
     {
-        
+        vidaActual += cantidadRecuperacion;
+        vidaActual = Mathf.Min(vidaActual, vidaMaxima);
+        Debug.Log("El jugador a recuperado " + cantidadRecuperacion + " puntos de vida");
     }
+  
+    
 }
