@@ -7,7 +7,7 @@ public class VidaJugador : MonoBehaviour
     public float vidaMaxima;
     [SerializeField] private float vidaActual;
 
-    private void RecibirDaño(float daño)
+    public void RecibirDaño(float daño)
     {
         vidaActual -= daño;
         if(vidaActual < 0)
@@ -15,7 +15,13 @@ public class VidaJugador : MonoBehaviour
             Debug.Log("JugadorMuerto");
             // logica de "Muerte" aca
             // puedes desactivar el Game Object del jugador o reniciar su nivel 
+            // gameObject.SetActive(false)
         }
+        else 
+        {
+            Debug.Log("El jugador a perdido 50 puntos ");
+        }
+
     }
 
     void Start()
