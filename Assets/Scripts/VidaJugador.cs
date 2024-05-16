@@ -10,7 +10,7 @@ public class VidaJugador : MonoBehaviour
     public void RecibirDaño(float daño)
     {
         vidaActual -= daño;
-        if(vidaActual < 0)
+        if(vidaActual <= 0)
         {
             Debug.Log("JugadorMuerto");
             // logica de "Muerte" aca
@@ -20,6 +20,7 @@ public class VidaJugador : MonoBehaviour
         else 
         {
             Debug.Log("El jugador a perdido 50 puntos ");
+            Debug.Log("El jugador a perdido 40 puntos ");
         }
 
     }
